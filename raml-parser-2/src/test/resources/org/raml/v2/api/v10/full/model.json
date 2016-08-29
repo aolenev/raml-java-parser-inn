@@ -1,0 +1,2331 @@
+{
+ "annotationTypes": [
+  {
+   "allowedTargets": [],
+   "annotations": [],
+   "defaultValue": null,
+   "description": null,
+   "displayName": {
+    "annotations": [],
+    "value": "basic"
+   },
+   "enumValues": [],
+   "example": null,
+   "examples": [],
+   "maxLength": null,
+   "minLength": null,
+   "name": "basic",
+   "pattern": null,
+   "required": true,
+   "toXmlSchema": "<schema xmlns=\"http://www.w3.org/2001/XMLSchema\" xmlns:tns=\"http://validationnamespace.raml.org\" attributeFormDefault=\"unqualified\" elementFormDefault=\"qualified\" targetNamespace=\"http://validationnamespace.raml.org\">\n    <element name=\"basic\">\n        <simpleType>\n            <restriction base=\"string\"/>\n        </simpleType>\n    </element>\n</schema>\n",
+   "type": "string",
+   "xml": null
+  },
+  {
+   "additionalProperties": true,
+   "allowedTargets": [
+    "API",
+    "Resource"
+   ],
+   "annotations": [],
+   "defaultValue": null,
+   "description": null,
+   "discriminator": null,
+   "discriminatorValue": null,
+   "displayName": {
+    "annotations": [],
+    "value": "complex"
+   },
+   "example": null,
+   "examples": [],
+   "maxProperties": null,
+   "minProperties": null,
+   "name": "complex",
+   "properties": [
+    {
+     "additionalProperties": true,
+     "allowedTargets": [],
+     "annotations": [],
+     "defaultValue": null,
+     "description": {
+      "annotations": [],
+      "value": "where is hypermedia"
+     },
+     "discriminator": null,
+     "discriminatorValue": null,
+     "displayName": {
+      "annotations": [],
+      "value": "controls"
+     },
+     "example": null,
+     "examples": [],
+     "maxProperties": null,
+     "minProperties": null,
+     "name": "controls",
+     "properties": [
+      {
+       "allowedTargets": [],
+       "annotations": [],
+       "defaultValue": "href",
+       "description": null,
+       "displayName": {
+        "annotations": [],
+        "value": "url?"
+       },
+       "enumValues": [],
+       "example": null,
+       "examples": [],
+       "maxLength": null,
+       "minLength": null,
+       "name": "url",
+       "pattern": null,
+       "required": false,
+       "toXmlSchema": "<schema xmlns=\"http://www.w3.org/2001/XMLSchema\" xmlns:tns=\"http://validationnamespace.raml.org\" attributeFormDefault=\"unqualified\" elementFormDefault=\"qualified\" targetNamespace=\"http://validationnamespace.raml.org\">\n    <element name=\"url\">\n        <simpleType>\n            <restriction base=\"string\"/>\n        </simpleType>\n    </element>\n</schema>\n",
+       "type": "string",
+       "xml": null
+      },
+      {
+       "allowedTargets": [],
+       "annotations": [],
+       "defaultValue": null,
+       "description": null,
+       "displayName": {
+        "annotations": [],
+        "value": "property"
+       },
+       "enumValues": [],
+       "example": null,
+       "examples": [],
+       "maxLength": null,
+       "minLength": null,
+       "name": "property",
+       "pattern": null,
+       "required": true,
+       "toXmlSchema": "<schema xmlns=\"http://www.w3.org/2001/XMLSchema\" xmlns:tns=\"http://validationnamespace.raml.org\" attributeFormDefault=\"unqualified\" elementFormDefault=\"qualified\" targetNamespace=\"http://validationnamespace.raml.org\">\n    <element name=\"property\">\n        <simpleType>\n            <restriction base=\"string\"/>\n        </simpleType>\n    </element>\n</schema>\n",
+       "type": "string",
+       "xml": null
+      },
+      {
+       "allowedTargets": [],
+       "annotations": [],
+       "defaultValue": null,
+       "description": null,
+       "displayName": {
+        "annotations": [],
+        "value": "names"
+       },
+       "example": null,
+       "examples": [],
+       "items": {
+        "allowedTargets": [],
+        "annotations": [],
+        "defaultValue": null,
+        "description": null,
+        "displayName": {
+         "annotations": [],
+         "value": "names"
+        },
+        "example": null,
+        "examples": [],
+        "name": "names",
+        "required": true,
+        "toXmlSchema": "<schema xmlns=\"http://www.w3.org/2001/XMLSchema\" xmlns:tns=\"http://validationnamespace.raml.org\" attributeFormDefault=\"unqualified\" elementFormDefault=\"qualified\" targetNamespace=\"http://validationnamespace.raml.org\">\n    <element name=\"names\">\n        <simpleType>\n            <restriction base=\"string\"/>\n        </simpleType>\n    </element>\n</schema>\n",
+        "type": "string[]",
+        "xml": null
+       },
+       "maxItems": null,
+       "minItems": null,
+       "name": "names",
+       "required": true,
+       "toXmlSchema": "<schema xmlns=\"http://www.w3.org/2001/XMLSchema\" xmlns:tns=\"http://validationnamespace.raml.org\" attributeFormDefault=\"unqualified\" elementFormDefault=\"qualified\" targetNamespace=\"http://validationnamespace.raml.org\">\n    <element maxOccurs=\"unbounded\" name=\"names\">\n        <simpleType>\n            <restriction base=\"string\"/>\n        </simpleType>\n    </element>\n</schema>\n",
+       "type": "string[]",
+       "uniqueItems": null,
+       "xml": null
+      }
+     ],
+     "required": true,
+     "toXmlSchema": "<schema xmlns=\"http://www.w3.org/2001/XMLSchema\" xmlns:tns=\"http://validationnamespace.raml.org\" attributeFormDefault=\"unqualified\" elementFormDefault=\"qualified\" targetNamespace=\"http://validationnamespace.raml.org\">\n    <element name=\"controls\">\n        <complexType>\n            <sequence>\n                <element minOccurs=\"0\" name=\"url\">\n                    <simpleType>\n                        <restriction base=\"string\"/>\n                    </simpleType>\n                </element>\n                <element name=\"property\">\n                    <simpleType>\n                        <restriction base=\"string\"/>\n                    </simpleType>\n                </element>\n                <element maxOccurs=\"unbounded\" name=\"names\">\n                    <simpleType>\n                        <restriction base=\"string\"/>\n                    </simpleType>\n                </element>\n                <any maxOccurs=\"unbounded\" minOccurs=\"0\" processContents=\"skip\"/>\n            </sequence>\n        </complexType>\n    </element>\n</schema>\n",
+     "type": "object",
+     "xml": null
+    },
+    {
+     "allowedTargets": [],
+     "annotations": [],
+     "defaultValue": "true",
+     "description": null,
+     "displayName": {
+      "annotations": [],
+      "value": "permanentUri?"
+     },
+     "example": null,
+     "examples": [],
+     "name": "permanentUri",
+     "required": false,
+     "toXmlSchema": "<schema xmlns=\"http://www.w3.org/2001/XMLSchema\" xmlns:tns=\"http://validationnamespace.raml.org\" attributeFormDefault=\"unqualified\" elementFormDefault=\"qualified\" targetNamespace=\"http://validationnamespace.raml.org\">\n    <element name=\"permanentUri\" type=\"boolean\"/>\n</schema>\n",
+     "type": "boolean",
+     "xml": null
+    }
+   ],
+   "required": true,
+   "toXmlSchema": "<schema xmlns=\"http://www.w3.org/2001/XMLSchema\" xmlns:tns=\"http://validationnamespace.raml.org\" attributeFormDefault=\"unqualified\" elementFormDefault=\"qualified\" targetNamespace=\"http://validationnamespace.raml.org\">\n    <element name=\"complex\">\n        <complexType>\n            <sequence>\n                <element name=\"controls\">\n                    <complexType>\n                        <sequence>\n                            <element minOccurs=\"0\" name=\"url\">\n                                <simpleType>\n                                    <restriction base=\"string\"/>\n                                </simpleType>\n                            </element>\n                            <element name=\"property\">\n                                <simpleType>\n                                    <restriction base=\"string\"/>\n                                </simpleType>\n                            </element>\n                            <element maxOccurs=\"unbounded\" name=\"names\">\n                                <simpleType>\n                                    <restriction base=\"string\"/>\n                                </simpleType>\n                            </element>\n                            <any maxOccurs=\"unbounded\" minOccurs=\"0\" processContents=\"skip\"/>\n                        </sequence>\n                    </complexType>\n                </element>\n                <element minOccurs=\"0\" name=\"permanentUri\" type=\"boolean\"/>\n                <any maxOccurs=\"unbounded\" minOccurs=\"0\" processContents=\"skip\"/>\n            </sequence>\n        </complexType>\n    </element>\n</schema>\n",
+   "type": "object",
+   "xml": null
+  }
+ ],
+ "annotations": [
+  {
+   "annotation": {
+    "allowedTargets": [],
+    "annotations": [],
+    "defaultValue": null,
+    "description": null,
+    "displayName": {
+     "annotations": [],
+     "value": "basic"
+    },
+    "example": null,
+    "examples": [],
+    "name": "basic",
+    "required": true,
+    "toXmlSchema": "<schema xmlns=\"http://www.w3.org/2001/XMLSchema\" xmlns:tns=\"http://validationnamespace.raml.org\" attributeFormDefault=\"unqualified\" elementFormDefault=\"qualified\" targetNamespace=\"http://validationnamespace.raml.org\">\n    <element name=\"basic\">\n        <simpleType>\n            <restriction base=\"string\"/>\n        </simpleType>\n    </element>\n</schema>\n",
+    "type": "string",
+    "xml": null
+   },
+   "name": "(basic)",
+   "structuredValue": {
+    "isScalar": true,
+    "properties": [],
+    "value": "sometimes"
+   }
+  },
+  {
+   "annotation": {
+    "allowedTargets": [
+     "API",
+     "Resource"
+    ],
+    "annotations": [],
+    "defaultValue": null,
+    "description": null,
+    "displayName": {
+     "annotations": [],
+     "value": "complex"
+    },
+    "example": null,
+    "examples": [],
+    "name": "complex",
+    "required": true,
+    "toXmlSchema": "<schema xmlns=\"http://www.w3.org/2001/XMLSchema\" xmlns:tns=\"http://validationnamespace.raml.org\" attributeFormDefault=\"unqualified\" elementFormDefault=\"qualified\" targetNamespace=\"http://validationnamespace.raml.org\">\n    <element name=\"complex\">\n        <complexType>\n            <sequence>\n                <element name=\"controls\">\n                    <complexType>\n                        <sequence>\n                            <element minOccurs=\"0\" name=\"url\">\n                                <simpleType>\n                                    <restriction base=\"string\"/>\n                                </simpleType>\n                            </element>\n                            <element name=\"property\">\n                                <simpleType>\n                                    <restriction base=\"string\"/>\n                                </simpleType>\n                            </element>\n                            <element maxOccurs=\"unbounded\" name=\"names\">\n                                <simpleType>\n                                    <restriction base=\"string\"/>\n                                </simpleType>\n                            </element>\n                            <any maxOccurs=\"unbounded\" minOccurs=\"0\" processContents=\"skip\"/>\n                        </sequence>\n                    </complexType>\n                </element>\n                <element minOccurs=\"0\" name=\"permanentUri\" type=\"boolean\"/>\n                <any maxOccurs=\"unbounded\" minOccurs=\"0\" processContents=\"skip\"/>\n            </sequence>\n        </complexType>\n    </element>\n</schema>\n",
+    "type": "object",
+    "xml": null
+   },
+   "name": "(complex)",
+   "structuredValue": {
+    "isScalar": false,
+    "properties": [
+     {
+      "isArray": false,
+      "name": "controls",
+      "value": {
+       "isScalar": false,
+       "properties": [
+        {
+         "isArray": false,
+         "name": "url",
+         "value": {
+          "isScalar": true,
+          "properties": [],
+          "value": "here"
+         },
+         "values": []
+        },
+        {
+         "isArray": false,
+         "name": "property",
+         "value": {
+          "isScalar": true,
+          "properties": [],
+          "value": "off"
+         },
+         "values": []
+        },
+        {
+         "isArray": true,
+         "name": "names",
+         "value": null,
+         "values": [
+          {
+           "isScalar": true,
+           "properties": [],
+           "value": "one"
+          },
+          {
+           "isScalar": true,
+           "properties": [],
+           "value": "two"
+          }
+         ]
+        }
+       ],
+       "value": null
+      },
+      "values": []
+     },
+     {
+      "isArray": false,
+      "name": "permanentUri",
+      "value": {
+       "isScalar": true,
+       "properties": [],
+       "value": false
+      },
+      "values": []
+     }
+    ],
+    "value": null
+   }
+  }
+ ],
+ "baseUri": {
+  "annotations": [],
+  "value": "http://base.uri/{version}/{param1}"
+ },
+ "baseUriParameters": [
+  {
+   "allowedTargets": [],
+   "annotations": [],
+   "defaultValue": null,
+   "description": {
+    "annotations": [],
+    "value": "some description"
+   },
+   "displayName": {
+    "annotations": [],
+    "value": "Param 1"
+   },
+   "enumValues": [],
+   "example": {
+    "annotations": [],
+    "name": null,
+    "structuredValue": {
+     "isScalar": true,
+     "properties": [],
+     "value": "one"
+    },
+    "value": "one"
+   },
+   "examples": [],
+   "maxLength": 10,
+   "minLength": null,
+   "name": "param1",
+   "pattern": null,
+   "required": true,
+   "toXmlSchema": "<schema xmlns=\"http://www.w3.org/2001/XMLSchema\" xmlns:tns=\"http://validationnamespace.raml.org\" attributeFormDefault=\"unqualified\" elementFormDefault=\"qualified\" targetNamespace=\"http://validationnamespace.raml.org\">\n    <element name=\"param1\">\n        <simpleType>\n            <restriction base=\"string\">\n                <maxLength value=\"10\"/>\n            </restriction>\n        </simpleType>\n    </element>\n</schema>\n",
+   "type": "string",
+   "xml": null
+  }
+ ],
+ "documentation": [
+  {
+   "annotations": [],
+   "content": {
+    "annotations": [
+     {
+      "annotation": {
+       "allowedTargets": [],
+       "annotations": [],
+       "defaultValue": null,
+       "description": null,
+       "displayName": {
+        "annotations": [],
+        "value": "basic"
+       },
+       "example": null,
+       "examples": [],
+       "name": "basic",
+       "required": true,
+       "toXmlSchema": "<schema xmlns=\"http://www.w3.org/2001/XMLSchema\" xmlns:tns=\"http://validationnamespace.raml.org\" attributeFormDefault=\"unqualified\" elementFormDefault=\"qualified\" targetNamespace=\"http://validationnamespace.raml.org\">\n    <element name=\"basic\">\n        <simpleType>\n            <restriction base=\"string\"/>\n        </simpleType>\n    </element>\n</schema>\n",
+       "type": "string",
+       "xml": null
+      },
+      "name": "(basic)",
+      "structuredValue": {
+       "isScalar": true,
+       "properties": [],
+       "value": "first chapter"
+      }
+     }
+    ],
+    "value": "single line"
+   },
+   "title": {
+    "annotations": [],
+    "value": "doc title 1"
+   }
+  },
+  {
+   "annotations": [],
+   "content": {
+    "annotations": [],
+    "value": "multi\nline\n"
+   },
+   "title": {
+    "annotations": [],
+    "value": "doc title 2"
+   }
+  }
+ ],
+ "mediaType": [
+  {
+   "value": "application/json"
+  }
+ ],
+ "protocols": [
+  "HTTP",
+  "HTTPS"
+ ],
+ "ramlVersion": "1.0",
+ "resourceTypes": [
+  {
+   "name": "first",
+   "usage": {
+    "annotations": [],
+    "value": "first usage"
+   }
+  }
+ ],
+ "resources": [
+  {
+   "annotations": [],
+   "description": {
+    "annotations": [],
+    "value": "top description"
+   },
+   "displayName": {
+    "annotations": [],
+    "value": "/top"
+   },
+   "is": [
+    {
+     "name": "traitOne",
+     "structuredValue": {
+      "isScalar": false,
+      "properties": [],
+      "value": null
+     },
+     "trait": {
+      "name": "traitOne",
+      "usage": {
+       "annotations": [],
+       "value": "late night"
+      }
+     }
+    },
+    {
+     "name": "traitTwo",
+     "structuredValue": {
+      "isScalar": false,
+      "properties": [
+       {
+        "isArray": false,
+        "name": "text",
+        "value": {
+         "isScalar": true,
+         "properties": [],
+         "value": "hola"
+        },
+        "values": []
+       }
+      ],
+      "value": null
+     },
+     "trait": {
+      "name": "traitTwo",
+      "usage": null
+     }
+    }
+   ],
+   "methods": [
+    {
+     "annotations": [],
+     "body": [],
+     "description": {
+      "annotations": [],
+      "value": "get something"
+     },
+     "displayName": {
+      "annotations": [],
+      "value": "uno"
+     },
+     "headers": [
+      {
+       "allowedTargets": [],
+       "annotations": [],
+       "defaultValue": null,
+       "description": null,
+       "displayName": {
+        "annotations": [],
+        "value": "one"
+       },
+       "enumValues": [],
+       "example": null,
+       "examples": [],
+       "maxLength": null,
+       "minLength": null,
+       "name": "one",
+       "pattern": null,
+       "required": true,
+       "toXmlSchema": "<schema xmlns=\"http://www.w3.org/2001/XMLSchema\" xmlns:tns=\"http://validationnamespace.raml.org\" attributeFormDefault=\"unqualified\" elementFormDefault=\"qualified\" targetNamespace=\"http://validationnamespace.raml.org\">\n    <element name=\"one\">\n        <simpleType>\n            <restriction base=\"string\"/>\n        </simpleType>\n    </element>\n</schema>\n",
+       "type": "string",
+       "xml": null
+      },
+      {
+       "allowedTargets": [],
+       "annotations": [],
+       "defaultValue": null,
+       "description": null,
+       "displayName": {
+        "annotations": [],
+        "value": "The Second"
+       },
+       "enumValues": [],
+       "example": null,
+       "examples": [],
+       "maxLength": null,
+       "minLength": null,
+       "name": "two",
+       "pattern": null,
+       "required": true,
+       "toXmlSchema": "<schema xmlns=\"http://www.w3.org/2001/XMLSchema\" xmlns:tns=\"http://validationnamespace.raml.org\" attributeFormDefault=\"unqualified\" elementFormDefault=\"qualified\" targetNamespace=\"http://validationnamespace.raml.org\">\n    <element name=\"two\">\n        <simpleType>\n            <restriction base=\"string\"/>\n        </simpleType>\n    </element>\n</schema>\n",
+       "type": "string",
+       "xml": null
+      }
+     ],
+     "is": [],
+     "method": "get",
+     "protocols": [
+      "HTTPS"
+     ],
+     "queryParameters": [
+      {
+       "allowedTargets": [],
+       "annotations": [],
+       "defaultValue": null,
+       "description": null,
+       "displayName": {
+        "annotations": [],
+        "value": "The One"
+       },
+       "enumValues": [],
+       "example": null,
+       "examples": [],
+       "format": null,
+       "maximum": null,
+       "minimum": null,
+       "multipleOf": null,
+       "name": "one",
+       "required": true,
+       "toXmlSchema": "<schema xmlns=\"http://www.w3.org/2001/XMLSchema\" xmlns:tns=\"http://validationnamespace.raml.org\" attributeFormDefault=\"unqualified\" elementFormDefault=\"qualified\" targetNamespace=\"http://validationnamespace.raml.org\">\n    <element name=\"one\">\n        <simpleType>\n            <restriction base=\"double\"/>\n        </simpleType>\n    </element>\n</schema>\n",
+       "type": "number",
+       "xml": null
+      },
+      {
+       "allowedTargets": [],
+       "annotations": [],
+       "defaultValue": null,
+       "description": null,
+       "displayName": {
+        "annotations": [],
+        "value": "two"
+       },
+       "example": null,
+       "examples": [],
+       "items": {
+        "allowedTargets": [],
+        "annotations": [],
+        "defaultValue": null,
+        "description": null,
+        "displayName": {
+         "annotations": [],
+         "value": "two"
+        },
+        "example": null,
+        "examples": [],
+        "name": "two",
+        "required": true,
+        "toXmlSchema": "<schema xmlns=\"http://www.w3.org/2001/XMLSchema\" xmlns:tns=\"http://validationnamespace.raml.org\" attributeFormDefault=\"unqualified\" elementFormDefault=\"qualified\" targetNamespace=\"http://validationnamespace.raml.org\">\n    <element name=\"two\">\n        <simpleType>\n            <restriction base=\"string\"/>\n        </simpleType>\n    </element>\n</schema>\n",
+        "type": "(string | number)[]",
+        "xml": null
+       },
+       "maxItems": null,
+       "minItems": null,
+       "name": "two",
+       "required": true,
+       "toXmlSchema": "<schema xmlns=\"http://www.w3.org/2001/XMLSchema\" xmlns:tns=\"http://validationnamespace.raml.org\" attributeFormDefault=\"unqualified\" elementFormDefault=\"qualified\" targetNamespace=\"http://validationnamespace.raml.org\">\n    <element maxOccurs=\"unbounded\" name=\"two\">\n        <simpleType>\n            <restriction base=\"string\"/>\n        </simpleType>\n    </element>\n</schema>\n",
+       "type": "(string | number)[]",
+       "uniqueItems": null,
+       "xml": null
+      }
+     ],
+     "queryString": null,
+     "responses": [],
+     "securedBy": [
+      {
+       "name": "oauth_2_0",
+       "securityScheme": {
+        "annotations": [],
+        "describedBy": {
+         "annotations": [],
+         "headers": [
+          {
+           "allowedTargets": [],
+           "annotations": [],
+           "defaultValue": null,
+           "description": {
+            "annotations": [],
+            "value": "Used to send a valid OAuth 2 access token. Do not use\nwith the \"access_token\" query string parameter.\n"
+           },
+           "displayName": {
+            "annotations": [],
+            "value": "Authorization"
+           },
+           "enumValues": [],
+           "example": null,
+           "examples": [],
+           "maxLength": null,
+           "minLength": null,
+           "name": "Authorization",
+           "pattern": null,
+           "required": true,
+           "toXmlSchema": "<schema xmlns=\"http://www.w3.org/2001/XMLSchema\" xmlns:tns=\"http://validationnamespace.raml.org\" attributeFormDefault=\"unqualified\" elementFormDefault=\"qualified\" targetNamespace=\"http://validationnamespace.raml.org\">\n    <element name=\"Authorization\">\n        <simpleType>\n            <restriction base=\"string\"/>\n        </simpleType>\n    </element>\n</schema>\n",
+           "type": "string",
+           "xml": null
+          }
+         ],
+         "queryParameters": [
+          {
+           "allowedTargets": [],
+           "annotations": [],
+           "defaultValue": null,
+           "description": {
+            "annotations": [],
+            "value": "Used to send a valid OAuth 2 access token. Do not use with\nthe \"Authorization\" header.\n"
+           },
+           "displayName": {
+            "annotations": [],
+            "value": "access_token"
+           },
+           "enumValues": [],
+           "example": null,
+           "examples": [],
+           "maxLength": null,
+           "minLength": null,
+           "name": "access_token",
+           "pattern": null,
+           "required": true,
+           "toXmlSchema": "<schema xmlns=\"http://www.w3.org/2001/XMLSchema\" xmlns:tns=\"http://validationnamespace.raml.org\" attributeFormDefault=\"unqualified\" elementFormDefault=\"qualified\" targetNamespace=\"http://validationnamespace.raml.org\">\n    <element name=\"access_token\">\n        <simpleType>\n            <restriction base=\"string\"/>\n        </simpleType>\n    </element>\n</schema>\n",
+           "type": "string",
+           "xml": null
+          }
+         ],
+         "queryString": null,
+         "responses": [
+          {
+           "annotations": [],
+           "body": [],
+           "code": {
+            "value": "401"
+           },
+           "description": {
+            "annotations": [],
+            "value": "Bad or expired token. This can happen if the user or Dropbox\nrevoked or expired an access token. To fix, re-authenticate\nthe user.\n"
+           },
+           "headers": []
+          },
+          {
+           "annotations": [],
+           "body": [],
+           "code": {
+            "value": "403"
+           },
+           "description": {
+            "annotations": [],
+            "value": "Bad OAuth request (wrong consumer key, bad nonce, expired\ntimestamp...). Unfortunately, re-authenticating the user won't help here.\n"
+           },
+           "headers": []
+          }
+         ]
+        },
+        "description": {
+         "annotations": [],
+         "value": "oauth 2.0"
+        },
+        "displayName": {
+         "annotations": [],
+         "value": "OAuth2"
+        },
+        "name": "oauth_2_0",
+        "settings": {
+         "accessTokenUri": {
+          "annotations": [],
+          "value": "https://api.dropbox.com/1/oauth2/token"
+         },
+         "annotations": [],
+         "authorizationGrants": [
+          "authorization_code",
+          "implicit"
+         ],
+         "authorizationUri": {
+          "annotations": [],
+          "value": "https://www.dropbox.com/1/oauth2/authorize"
+         },
+         "requestTokenUri": null,
+         "scopes": [],
+         "signatures": [],
+         "tokenCredentialsUri": null
+        },
+        "type": "OAuth 2.0"
+       },
+       "structuredValue": {
+        "isScalar": false,
+        "properties": [],
+        "value": null
+       }
+      }
+     ]
+    },
+    {
+     "annotations": [],
+     "body": [
+      {
+       "additionalProperties": true,
+       "allowedTargets": [],
+       "annotations": [],
+       "defaultValue": null,
+       "description": null,
+       "discriminator": null,
+       "discriminatorValue": null,
+       "displayName": {
+        "annotations": [],
+        "value": "application/json"
+       },
+       "example": {
+        "annotations": [],
+        "name": null,
+        "structuredValue": {
+         "isScalar": true,
+         "properties": [],
+         "value": "{\n    \"firstname\": \"tato\",\n    \"lastname\": \"bores\",\n    \"age\": 66\n}\n"
+        },
+        "value": "{\n    \"firstname\": \"tato\",\n    \"lastname\": \"bores\",\n    \"age\": 66\n}\n"
+       },
+       "examples": [],
+       "maxProperties": null,
+       "minProperties": null,
+       "name": "application/json",
+       "properties": [
+        {
+         "allowedTargets": [],
+         "annotations": [],
+         "defaultValue": null,
+         "description": null,
+         "displayName": {
+          "annotations": [],
+          "value": "firstname"
+         },
+         "enumValues": [],
+         "example": null,
+         "examples": [],
+         "maxLength": null,
+         "minLength": null,
+         "name": "firstname",
+         "pattern": null,
+         "required": true,
+         "toXmlSchema": "<schema xmlns=\"http://www.w3.org/2001/XMLSchema\" xmlns:tns=\"http://validationnamespace.raml.org\" attributeFormDefault=\"unqualified\" elementFormDefault=\"qualified\" targetNamespace=\"http://validationnamespace.raml.org\">\n    <element name=\"firstname\">\n        <simpleType>\n            <restriction base=\"string\"/>\n        </simpleType>\n    </element>\n</schema>\n",
+         "type": "string",
+         "xml": null
+        },
+        {
+         "allowedTargets": [],
+         "annotations": [],
+         "defaultValue": null,
+         "description": null,
+         "displayName": {
+          "annotations": [],
+          "value": "lastname"
+         },
+         "enumValues": [],
+         "example": null,
+         "examples": [],
+         "maxLength": null,
+         "minLength": null,
+         "name": "lastname",
+         "pattern": null,
+         "required": true,
+         "toXmlSchema": "<schema xmlns=\"http://www.w3.org/2001/XMLSchema\" xmlns:tns=\"http://validationnamespace.raml.org\" attributeFormDefault=\"unqualified\" elementFormDefault=\"qualified\" targetNamespace=\"http://validationnamespace.raml.org\">\n    <element name=\"lastname\">\n        <simpleType>\n            <restriction base=\"string\"/>\n        </simpleType>\n    </element>\n</schema>\n",
+         "type": "string",
+         "xml": null
+        },
+        {
+         "allowedTargets": [],
+         "annotations": [],
+         "defaultValue": null,
+         "description": null,
+         "displayName": {
+          "annotations": [],
+          "value": "age"
+         },
+         "enumValues": [],
+         "example": null,
+         "examples": [],
+         "format": null,
+         "maximum": 144.0,
+         "minimum": 0.0,
+         "multipleOf": null,
+         "name": "age",
+         "required": true,
+         "toXmlSchema": "<schema xmlns=\"http://www.w3.org/2001/XMLSchema\" xmlns:tns=\"http://validationnamespace.raml.org\" attributeFormDefault=\"unqualified\" elementFormDefault=\"qualified\" targetNamespace=\"http://validationnamespace.raml.org\">\n    <element name=\"age\">\n        <simpleType>\n            <restriction base=\"integer\">\n                <minInclusive value=\"0\"/>\n                <maxInclusive value=\"144\"/>\n            </restriction>\n        </simpleType>\n    </element>\n</schema>\n",
+         "type": "integer",
+         "xml": null
+        },
+        {
+         "allowedTargets": [],
+         "annotations": [],
+         "defaultValue": null,
+         "description": null,
+         "displayName": {
+          "annotations": [],
+          "value": "height?"
+         },
+         "enumValues": [],
+         "example": null,
+         "examples": [],
+         "format": null,
+         "maximum": null,
+         "minimum": null,
+         "multipleOf": null,
+         "name": "height",
+         "required": false,
+         "toXmlSchema": "<schema xmlns=\"http://www.w3.org/2001/XMLSchema\" xmlns:tns=\"http://validationnamespace.raml.org\" attributeFormDefault=\"unqualified\" elementFormDefault=\"qualified\" targetNamespace=\"http://validationnamespace.raml.org\">\n    <element name=\"height\">\n        <simpleType>\n            <restriction base=\"double\"/>\n        </simpleType>\n    </element>\n</schema>\n",
+         "type": "number",
+         "xml": null
+        },
+        {
+         "allowedTargets": [],
+         "annotations": [],
+         "defaultValue": null,
+         "description": null,
+         "displayName": {
+          "annotations": [],
+          "value": "goggles?"
+         },
+         "example": null,
+         "examples": [],
+         "name": "goggles",
+         "required": false,
+         "toXmlSchema": "<schema xmlns=\"http://www.w3.org/2001/XMLSchema\" xmlns:tns=\"http://validationnamespace.raml.org\" attributeFormDefault=\"unqualified\" elementFormDefault=\"qualified\" targetNamespace=\"http://validationnamespace.raml.org\">\n    <element name=\"goggles\" type=\"boolean\"/>\n</schema>\n",
+         "type": "boolean",
+         "xml": null
+        }
+       ],
+       "required": true,
+       "toXmlSchema": "<schema xmlns=\"http://www.w3.org/2001/XMLSchema\" xmlns:tns=\"http://validationnamespace.raml.org\" attributeFormDefault=\"unqualified\" elementFormDefault=\"qualified\" targetNamespace=\"http://validationnamespace.raml.org\">\n    <element name=\"User\">\n        <complexType>\n            <sequence>\n                <element name=\"firstname\">\n                    <simpleType>\n                        <restriction base=\"string\"/>\n                    </simpleType>\n                </element>\n                <element name=\"lastname\">\n                    <simpleType>\n                        <restriction base=\"string\"/>\n                    </simpleType>\n                </element>\n                <element name=\"age\">\n                    <simpleType>\n                        <restriction base=\"integer\">\n                            <minInclusive value=\"0\"/>\n                            <maxInclusive value=\"144\"/>\n                        </restriction>\n                    </simpleType>\n                </element>\n                <element minOccurs=\"0\" name=\"height\">\n                    <simpleType>\n                        <restriction base=\"double\"/>\n                    </simpleType>\n                </element>\n                <element minOccurs=\"0\" name=\"goggles\" type=\"boolean\"/>\n                <any maxOccurs=\"unbounded\" minOccurs=\"0\" processContents=\"skip\"/>\n            </sequence>\n        </complexType>\n    </element>\n</schema>\n",
+       "type": "User",
+       "xml": null
+      },
+      {
+       "allowedTargets": [],
+       "annotations": [],
+       "defaultValue": null,
+       "description": null,
+       "displayName": {
+        "annotations": [],
+        "value": "application/xml"
+       },
+       "example": null,
+       "examples": [
+        {
+         "annotations": [],
+         "name": "first",
+         "structuredValue": {
+          "isScalar": true,
+          "properties": [],
+          "value": "<first/>\n"
+         },
+         "value": "<first/>\n"
+        },
+        {
+         "annotations": [],
+         "name": "second",
+         "structuredValue": {
+          "isScalar": true,
+          "properties": [],
+          "value": "<second/>\n"
+         },
+         "value": "<second/>\n"
+        }
+       ],
+       "name": "application/xml",
+       "required": true,
+       "schemaContent": "<?xml version=\"1.0\" encoding=\"utf-16\"?>\n<xsd:schema attributeFormDefault=\"unqualified\" elementFormDefault=\"qualified\" version=\"1.0\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\">\n  <xsd:element name=\"first\" type=\"xsd:string\" />\n  <xsd:element name=\"second\" type=\"xsd:string\" />\n</xsd:schema>\n",
+       "toXmlSchema": null,
+       "type": "<?xml version=\"1.0\" encoding=\"utf-16\"?>\n<xsd:schema attributeFormDefault=\"unqualified\" elementFormDefault=\"qualified\" version=\"1.0\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\">\n  <xsd:element name=\"first\" type=\"xsd:string\" />\n  <xsd:element name=\"second\" type=\"xsd:string\" />\n</xsd:schema>\n",
+       "xml": null
+      }
+     ],
+     "description": {
+      "annotations": [],
+      "value": "post something"
+     },
+     "displayName": {
+      "annotations": [],
+      "value": "dos"
+     },
+     "headers": [],
+     "is": [
+      {
+       "name": "traitTwo",
+       "structuredValue": {
+        "isScalar": false,
+        "properties": [
+         {
+          "isArray": false,
+          "name": "text",
+          "value": {
+           "isScalar": true,
+           "properties": [],
+           "value": "picky"
+          },
+          "values": []
+         }
+        ],
+        "value": null
+       },
+       "trait": {
+        "name": "traitTwo",
+        "usage": null
+       }
+      }
+     ],
+     "method": "post",
+     "protocols": [],
+     "queryParameters": [],
+     "queryString": {
+      "allowedTargets": [],
+      "annotations": [],
+      "defaultValue": null,
+      "description": null,
+      "displayName": {
+       "annotations": [],
+       "value": "queryString"
+      },
+      "example": null,
+      "examples": [],
+      "name": "queryString",
+      "required": true,
+      "toXmlSchema": "<schema xmlns=\"http://www.w3.org/2001/XMLSchema\" xmlns:tns=\"http://validationnamespace.raml.org\" attributeFormDefault=\"unqualified\" elementFormDefault=\"qualified\" targetNamespace=\"http://validationnamespace.raml.org\">\n    <element name=\"root\">\n        <complexType>\n            <sequence>\n                <element name=\"lat\">\n                    <simpleType>\n                        <restriction base=\"double\"/>\n                    </simpleType>\n                </element>\n                <element name=\"long\">\n                    <simpleType>\n                        <restriction base=\"double\"/>\n                    </simpleType>\n                </element>\n                <any maxOccurs=\"unbounded\" minOccurs=\"0\" processContents=\"skip\"/>\n            </sequence>\n        </complexType>\n    </element>\n</schema>\n",
+      "type": "object",
+      "xml": null
+     },
+     "responses": [
+      {
+       "annotations": [],
+       "body": [
+        {
+         "additionalProperties": true,
+         "allowedTargets": [],
+         "annotations": [],
+         "defaultValue": null,
+         "description": null,
+         "discriminator": null,
+         "discriminatorValue": null,
+         "displayName": {
+          "annotations": [],
+          "value": "application/json"
+         },
+         "example": {
+          "annotations": [],
+          "name": null,
+          "structuredValue": {
+           "isScalar": true,
+           "properties": [],
+           "value": "{\n    \"firstname\": \"tato\",\n    \"lastname\": \"bores\",\n    \"age\": 66\n}\n"
+          },
+          "value": "{\n    \"firstname\": \"tato\",\n    \"lastname\": \"bores\",\n    \"age\": 66\n}\n"
+         },
+         "examples": [],
+         "maxProperties": null,
+         "minProperties": null,
+         "name": "application/json",
+         "properties": [
+          {
+           "allowedTargets": [],
+           "annotations": [],
+           "defaultValue": null,
+           "description": null,
+           "displayName": {
+            "annotations": [],
+            "value": "firstname"
+           },
+           "enumValues": [],
+           "example": null,
+           "examples": [],
+           "maxLength": null,
+           "minLength": null,
+           "name": "firstname",
+           "pattern": null,
+           "required": true,
+           "toXmlSchema": "<schema xmlns=\"http://www.w3.org/2001/XMLSchema\" xmlns:tns=\"http://validationnamespace.raml.org\" attributeFormDefault=\"unqualified\" elementFormDefault=\"qualified\" targetNamespace=\"http://validationnamespace.raml.org\">\n    <element name=\"firstname\">\n        <simpleType>\n            <restriction base=\"string\"/>\n        </simpleType>\n    </element>\n</schema>\n",
+           "type": "string",
+           "xml": null
+          },
+          {
+           "allowedTargets": [],
+           "annotations": [],
+           "defaultValue": null,
+           "description": null,
+           "displayName": {
+            "annotations": [],
+            "value": "lastname"
+           },
+           "enumValues": [],
+           "example": null,
+           "examples": [],
+           "maxLength": null,
+           "minLength": null,
+           "name": "lastname",
+           "pattern": null,
+           "required": true,
+           "toXmlSchema": "<schema xmlns=\"http://www.w3.org/2001/XMLSchema\" xmlns:tns=\"http://validationnamespace.raml.org\" attributeFormDefault=\"unqualified\" elementFormDefault=\"qualified\" targetNamespace=\"http://validationnamespace.raml.org\">\n    <element name=\"lastname\">\n        <simpleType>\n            <restriction base=\"string\"/>\n        </simpleType>\n    </element>\n</schema>\n",
+           "type": "string",
+           "xml": null
+          },
+          {
+           "allowedTargets": [],
+           "annotations": [],
+           "defaultValue": null,
+           "description": null,
+           "displayName": {
+            "annotations": [],
+            "value": "age"
+           },
+           "enumValues": [],
+           "example": null,
+           "examples": [],
+           "format": null,
+           "maximum": 144.0,
+           "minimum": 0.0,
+           "multipleOf": null,
+           "name": "age",
+           "required": true,
+           "toXmlSchema": "<schema xmlns=\"http://www.w3.org/2001/XMLSchema\" xmlns:tns=\"http://validationnamespace.raml.org\" attributeFormDefault=\"unqualified\" elementFormDefault=\"qualified\" targetNamespace=\"http://validationnamespace.raml.org\">\n    <element name=\"age\">\n        <simpleType>\n            <restriction base=\"integer\">\n                <minInclusive value=\"0\"/>\n                <maxInclusive value=\"144\"/>\n            </restriction>\n        </simpleType>\n    </element>\n</schema>\n",
+           "type": "integer",
+           "xml": null
+          },
+          {
+           "allowedTargets": [],
+           "annotations": [],
+           "defaultValue": null,
+           "description": null,
+           "displayName": {
+            "annotations": [],
+            "value": "height?"
+           },
+           "enumValues": [],
+           "example": null,
+           "examples": [],
+           "format": null,
+           "maximum": null,
+           "minimum": null,
+           "multipleOf": null,
+           "name": "height",
+           "required": false,
+           "toXmlSchema": "<schema xmlns=\"http://www.w3.org/2001/XMLSchema\" xmlns:tns=\"http://validationnamespace.raml.org\" attributeFormDefault=\"unqualified\" elementFormDefault=\"qualified\" targetNamespace=\"http://validationnamespace.raml.org\">\n    <element name=\"height\">\n        <simpleType>\n            <restriction base=\"double\"/>\n        </simpleType>\n    </element>\n</schema>\n",
+           "type": "number",
+           "xml": null
+          },
+          {
+           "allowedTargets": [],
+           "annotations": [],
+           "defaultValue": null,
+           "description": null,
+           "displayName": {
+            "annotations": [],
+            "value": "goggles?"
+           },
+           "example": null,
+           "examples": [],
+           "name": "goggles",
+           "required": false,
+           "toXmlSchema": "<schema xmlns=\"http://www.w3.org/2001/XMLSchema\" xmlns:tns=\"http://validationnamespace.raml.org\" attributeFormDefault=\"unqualified\" elementFormDefault=\"qualified\" targetNamespace=\"http://validationnamespace.raml.org\">\n    <element name=\"goggles\" type=\"boolean\"/>\n</schema>\n",
+           "type": "boolean",
+           "xml": null
+          }
+         ],
+         "required": true,
+         "toXmlSchema": "<schema xmlns=\"http://www.w3.org/2001/XMLSchema\" xmlns:tns=\"http://validationnamespace.raml.org\" attributeFormDefault=\"unqualified\" elementFormDefault=\"qualified\" targetNamespace=\"http://validationnamespace.raml.org\">\n    <element name=\"User\">\n        <complexType>\n            <sequence>\n                <element name=\"firstname\">\n                    <simpleType>\n                        <restriction base=\"string\"/>\n                    </simpleType>\n                </element>\n                <element name=\"lastname\">\n                    <simpleType>\n                        <restriction base=\"string\"/>\n                    </simpleType>\n                </element>\n                <element name=\"age\">\n                    <simpleType>\n                        <restriction base=\"integer\">\n                            <minInclusive value=\"0\"/>\n                            <maxInclusive value=\"144\"/>\n                        </restriction>\n                    </simpleType>\n                </element>\n                <element minOccurs=\"0\" name=\"height\">\n                    <simpleType>\n                        <restriction base=\"double\"/>\n                    </simpleType>\n                </element>\n                <element minOccurs=\"0\" name=\"goggles\" type=\"boolean\"/>\n                <any maxOccurs=\"unbounded\" minOccurs=\"0\" processContents=\"skip\"/>\n            </sequence>\n        </complexType>\n    </element>\n</schema>\n",
+         "type": "User",
+         "xml": null
+        },
+        {
+         "allowedTargets": [],
+         "annotations": [],
+         "defaultValue": null,
+         "description": null,
+         "displayName": {
+          "annotations": [],
+          "value": "application/xml"
+         },
+         "example": null,
+         "examples": [
+          {
+           "annotations": [],
+           "name": "first",
+           "structuredValue": {
+            "isScalar": true,
+            "properties": [],
+            "value": "<first/>\n"
+           },
+           "value": "<first/>\n"
+          },
+          {
+           "annotations": [],
+           "name": "second",
+           "structuredValue": {
+            "isScalar": true,
+            "properties": [],
+            "value": "<second/>\n"
+           },
+           "value": "<second/>\n"
+          }
+         ],
+         "name": "application/xml",
+         "required": true,
+         "schemaContent": "<?xml version=\"1.0\" encoding=\"utf-16\"?>\n<xsd:schema attributeFormDefault=\"unqualified\" elementFormDefault=\"qualified\" version=\"1.0\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\">\n  <xsd:element name=\"first\" type=\"xsd:string\" />\n  <xsd:element name=\"second\" type=\"xsd:string\" />\n</xsd:schema>\n",
+         "toXmlSchema": null,
+         "type": "<?xml version=\"1.0\" encoding=\"utf-16\"?>\n<xsd:schema attributeFormDefault=\"unqualified\" elementFormDefault=\"qualified\" version=\"1.0\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\">\n  <xsd:element name=\"first\" type=\"xsd:string\" />\n  <xsd:element name=\"second\" type=\"xsd:string\" />\n</xsd:schema>\n",
+         "xml": null
+        }
+       ],
+       "code": {
+        "value": "200"
+       },
+       "description": null,
+       "headers": [
+        {
+         "allowedTargets": [],
+         "annotations": [],
+         "defaultValue": null,
+         "description": null,
+         "displayName": {
+          "annotations": [],
+          "value": "one"
+         },
+         "enumValues": [],
+         "example": null,
+         "examples": [],
+         "maxLength": null,
+         "minLength": null,
+         "name": "one",
+         "pattern": null,
+         "required": true,
+         "toXmlSchema": "<schema xmlns=\"http://www.w3.org/2001/XMLSchema\" xmlns:tns=\"http://validationnamespace.raml.org\" attributeFormDefault=\"unqualified\" elementFormDefault=\"qualified\" targetNamespace=\"http://validationnamespace.raml.org\">\n    <element name=\"one\">\n        <simpleType>\n            <restriction base=\"string\"/>\n        </simpleType>\n    </element>\n</schema>\n",
+         "type": "string",
+         "xml": null
+        },
+        {
+         "allowedTargets": [],
+         "annotations": [],
+         "defaultValue": null,
+         "description": null,
+         "displayName": {
+          "annotations": [],
+          "value": "The Second"
+         },
+         "enumValues": [],
+         "example": null,
+         "examples": [],
+         "maxLength": null,
+         "minLength": null,
+         "name": "two",
+         "pattern": null,
+         "required": true,
+         "toXmlSchema": "<schema xmlns=\"http://www.w3.org/2001/XMLSchema\" xmlns:tns=\"http://validationnamespace.raml.org\" attributeFormDefault=\"unqualified\" elementFormDefault=\"qualified\" targetNamespace=\"http://validationnamespace.raml.org\">\n    <element name=\"two\">\n        <simpleType>\n            <restriction base=\"string\"/>\n        </simpleType>\n    </element>\n</schema>\n",
+         "type": "string",
+         "xml": null
+        }
+       ]
+      },
+      {
+       "annotations": [],
+       "body": [
+        {
+         "allowedTargets": [],
+         "annotations": [],
+         "defaultValue": null,
+         "description": null,
+         "displayName": {
+          "annotations": [],
+          "value": "text/plain"
+         },
+         "example": null,
+         "examples": [],
+         "name": "text/plain",
+         "required": true,
+         "toXmlSchema": null,
+         "type": "any",
+         "xml": null
+        }
+       ],
+       "code": {
+        "value": "400"
+       },
+       "description": null,
+       "headers": []
+      }
+     ],
+     "securedBy": []
+    }
+   ],
+   "relativeUri": {
+    "value": "/top"
+   },
+   "resourcePath": "/top",
+   "resources": [
+    {
+     "annotations": [],
+     "description": {
+      "annotations": [],
+      "value": "child description"
+     },
+     "displayName": {
+      "annotations": [],
+      "value": "/child"
+     },
+     "is": [],
+     "methods": [],
+     "relativeUri": {
+      "value": "/child"
+     },
+     "resourcePath": "/top/child",
+     "resources": [],
+     "securedBy": [
+      {
+       "name": "oauth_2_0",
+       "securityScheme": {
+        "annotations": [],
+        "describedBy": {
+         "annotations": [],
+         "headers": [
+          {
+           "allowedTargets": [],
+           "annotations": [],
+           "defaultValue": null,
+           "description": {
+            "annotations": [],
+            "value": "Used to send a valid OAuth 2 access token. Do not use\nwith the \"access_token\" query string parameter.\n"
+           },
+           "displayName": {
+            "annotations": [],
+            "value": "Authorization"
+           },
+           "enumValues": [],
+           "example": null,
+           "examples": [],
+           "maxLength": null,
+           "minLength": null,
+           "name": "Authorization",
+           "pattern": null,
+           "required": true,
+           "toXmlSchema": "<schema xmlns=\"http://www.w3.org/2001/XMLSchema\" xmlns:tns=\"http://validationnamespace.raml.org\" attributeFormDefault=\"unqualified\" elementFormDefault=\"qualified\" targetNamespace=\"http://validationnamespace.raml.org\">\n    <element name=\"Authorization\">\n        <simpleType>\n            <restriction base=\"string\"/>\n        </simpleType>\n    </element>\n</schema>\n",
+           "type": "string",
+           "xml": null
+          }
+         ],
+         "queryParameters": [
+          {
+           "allowedTargets": [],
+           "annotations": [],
+           "defaultValue": null,
+           "description": {
+            "annotations": [],
+            "value": "Used to send a valid OAuth 2 access token. Do not use with\nthe \"Authorization\" header.\n"
+           },
+           "displayName": {
+            "annotations": [],
+            "value": "access_token"
+           },
+           "enumValues": [],
+           "example": null,
+           "examples": [],
+           "maxLength": null,
+           "minLength": null,
+           "name": "access_token",
+           "pattern": null,
+           "required": true,
+           "toXmlSchema": "<schema xmlns=\"http://www.w3.org/2001/XMLSchema\" xmlns:tns=\"http://validationnamespace.raml.org\" attributeFormDefault=\"unqualified\" elementFormDefault=\"qualified\" targetNamespace=\"http://validationnamespace.raml.org\">\n    <element name=\"access_token\">\n        <simpleType>\n            <restriction base=\"string\"/>\n        </simpleType>\n    </element>\n</schema>\n",
+           "type": "string",
+           "xml": null
+          }
+         ],
+         "queryString": null,
+         "responses": [
+          {
+           "annotations": [],
+           "body": [],
+           "code": {
+            "value": "401"
+           },
+           "description": {
+            "annotations": [],
+            "value": "Bad or expired token. This can happen if the user or Dropbox\nrevoked or expired an access token. To fix, re-authenticate\nthe user.\n"
+           },
+           "headers": []
+          },
+          {
+           "annotations": [],
+           "body": [],
+           "code": {
+            "value": "403"
+           },
+           "description": {
+            "annotations": [],
+            "value": "Bad OAuth request (wrong consumer key, bad nonce, expired\ntimestamp...). Unfortunately, re-authenticating the user won't help here.\n"
+           },
+           "headers": []
+          }
+         ]
+        },
+        "description": {
+         "annotations": [],
+         "value": "oauth 2.0"
+        },
+        "displayName": {
+         "annotations": [],
+         "value": "OAuth2"
+        },
+        "name": "oauth_2_0",
+        "settings": {
+         "accessTokenUri": {
+          "annotations": [],
+          "value": "https://api.dropbox.com/1/oauth2/token"
+         },
+         "annotations": [],
+         "authorizationGrants": [
+          "authorization_code",
+          "implicit"
+         ],
+         "authorizationUri": {
+          "annotations": [],
+          "value": "https://www.dropbox.com/1/oauth2/authorize"
+         },
+         "requestTokenUri": null,
+         "scopes": [],
+         "signatures": [],
+         "tokenCredentialsUri": null
+        },
+        "type": "OAuth 2.0"
+       },
+       "structuredValue": {
+        "isScalar": false,
+        "properties": [],
+        "value": null
+       }
+      },
+      {
+       "name": "oauth_1_0",
+       "securityScheme": {
+        "annotations": [],
+        "describedBy": null,
+        "description": {
+         "annotations": [],
+         "value": "OAuth 1.0 continues to be supported"
+        },
+        "displayName": {
+         "annotations": [],
+         "value": "oauth_1_0"
+        },
+        "name": "oauth_1_0",
+        "settings": {
+         "accessTokenUri": null,
+         "annotations": [],
+         "authorizationGrants": [],
+         "authorizationUri": {
+          "annotations": [],
+          "value": "https://www.dropbox.com/1/oauth/authorize"
+         },
+         "requestTokenUri": {
+          "annotations": [],
+          "value": "https://api.dropbox.com/1/oauth/request_token"
+         },
+         "scopes": [],
+         "signatures": [
+          "HMAC-SHA1",
+          "PLAINTEXT"
+         ],
+         "tokenCredentialsUri": {
+          "annotations": [],
+          "value": "https://api.dropbox.com/1/oauth/access_token"
+         }
+        },
+        "type": "OAuth 1.0"
+       },
+       "structuredValue": {
+        "isScalar": false,
+        "properties": [],
+        "value": null
+       }
+      },
+      null
+     ],
+     "type": null,
+     "uriParameters": []
+    }
+   ],
+   "securedBy": [],
+   "type": {
+    "name": "first",
+    "resourceType": {
+     "name": "first",
+     "usage": {
+      "annotations": [],
+      "value": "first usage"
+     }
+    },
+    "structuredValue": {
+     "isScalar": false,
+     "properties": [],
+     "value": null
+    }
+   },
+   "uriParameters": []
+  }
+ ],
+ "schemas": [],
+ "securedBy": [
+  {
+   "name": "oauth_2_0",
+   "securityScheme": {
+    "annotations": [],
+    "describedBy": {
+     "annotations": [],
+     "headers": [
+      {
+       "allowedTargets": [],
+       "annotations": [],
+       "defaultValue": null,
+       "description": {
+        "annotations": [],
+        "value": "Used to send a valid OAuth 2 access token. Do not use\nwith the \"access_token\" query string parameter.\n"
+       },
+       "displayName": {
+        "annotations": [],
+        "value": "Authorization"
+       },
+       "enumValues": [],
+       "example": null,
+       "examples": [],
+       "maxLength": null,
+       "minLength": null,
+       "name": "Authorization",
+       "pattern": null,
+       "required": true,
+       "toXmlSchema": "<schema xmlns=\"http://www.w3.org/2001/XMLSchema\" xmlns:tns=\"http://validationnamespace.raml.org\" attributeFormDefault=\"unqualified\" elementFormDefault=\"qualified\" targetNamespace=\"http://validationnamespace.raml.org\">\n    <element name=\"Authorization\">\n        <simpleType>\n            <restriction base=\"string\"/>\n        </simpleType>\n    </element>\n</schema>\n",
+       "type": "string",
+       "xml": null
+      }
+     ],
+     "queryParameters": [
+      {
+       "allowedTargets": [],
+       "annotations": [],
+       "defaultValue": null,
+       "description": {
+        "annotations": [],
+        "value": "Used to send a valid OAuth 2 access token. Do not use with\nthe \"Authorization\" header.\n"
+       },
+       "displayName": {
+        "annotations": [],
+        "value": "access_token"
+       },
+       "enumValues": [],
+       "example": null,
+       "examples": [],
+       "maxLength": null,
+       "minLength": null,
+       "name": "access_token",
+       "pattern": null,
+       "required": true,
+       "toXmlSchema": "<schema xmlns=\"http://www.w3.org/2001/XMLSchema\" xmlns:tns=\"http://validationnamespace.raml.org\" attributeFormDefault=\"unqualified\" elementFormDefault=\"qualified\" targetNamespace=\"http://validationnamespace.raml.org\">\n    <element name=\"access_token\">\n        <simpleType>\n            <restriction base=\"string\"/>\n        </simpleType>\n    </element>\n</schema>\n",
+       "type": "string",
+       "xml": null
+      }
+     ],
+     "queryString": null,
+     "responses": [
+      {
+       "annotations": [],
+       "body": [],
+       "code": {
+        "value": "401"
+       },
+       "description": {
+        "annotations": [],
+        "value": "Bad or expired token. This can happen if the user or Dropbox\nrevoked or expired an access token. To fix, re-authenticate\nthe user.\n"
+       },
+       "headers": []
+      },
+      {
+       "annotations": [],
+       "body": [],
+       "code": {
+        "value": "403"
+       },
+       "description": {
+        "annotations": [],
+        "value": "Bad OAuth request (wrong consumer key, bad nonce, expired\ntimestamp...). Unfortunately, re-authenticating the user won't help here.\n"
+       },
+       "headers": []
+      }
+     ]
+    },
+    "description": {
+     "annotations": [],
+     "value": "oauth 2.0"
+    },
+    "displayName": {
+     "annotations": [],
+     "value": "OAuth2"
+    },
+    "name": "oauth_2_0",
+    "settings": {
+     "accessTokenUri": {
+      "annotations": [],
+      "value": "https://api.dropbox.com/1/oauth2/token"
+     },
+     "annotations": [],
+     "authorizationGrants": [
+      "authorization_code",
+      "implicit"
+     ],
+     "authorizationUri": {
+      "annotations": [],
+      "value": "https://www.dropbox.com/1/oauth2/authorize"
+     },
+     "requestTokenUri": null,
+     "scopes": [],
+     "signatures": [],
+     "tokenCredentialsUri": null
+    },
+    "type": "OAuth 2.0"
+   },
+   "structuredValue": {
+    "isScalar": false,
+    "properties": [],
+    "value": null
+   }
+  },
+  {
+   "name": "oauth_1_0",
+   "securityScheme": {
+    "annotations": [],
+    "describedBy": null,
+    "description": {
+     "annotations": [],
+     "value": "OAuth 1.0 continues to be supported"
+    },
+    "displayName": {
+     "annotations": [],
+     "value": "oauth_1_0"
+    },
+    "name": "oauth_1_0",
+    "settings": {
+     "accessTokenUri": null,
+     "annotations": [],
+     "authorizationGrants": [],
+     "authorizationUri": {
+      "annotations": [],
+      "value": "https://www.dropbox.com/1/oauth/authorize"
+     },
+     "requestTokenUri": {
+      "annotations": [],
+      "value": "https://api.dropbox.com/1/oauth/request_token"
+     },
+     "scopes": [],
+     "signatures": [
+      "HMAC-SHA1",
+      "PLAINTEXT"
+     ],
+     "tokenCredentialsUri": {
+      "annotations": [],
+      "value": "https://api.dropbox.com/1/oauth/access_token"
+     }
+    },
+    "type": "OAuth 1.0"
+   },
+   "structuredValue": {
+    "isScalar": false,
+    "properties": [],
+    "value": null
+   }
+  },
+  null
+ ],
+ "securitySchemes": [
+  {
+   "annotations": [],
+   "describedBy": {
+    "annotations": [],
+    "headers": [
+     {
+      "allowedTargets": [],
+      "annotations": [],
+      "defaultValue": null,
+      "description": {
+       "annotations": [],
+       "value": "Used to send a valid OAuth 2 access token. Do not use\nwith the \"access_token\" query string parameter.\n"
+      },
+      "displayName": {
+       "annotations": [],
+       "value": "Authorization"
+      },
+      "enumValues": [],
+      "example": null,
+      "examples": [],
+      "maxLength": null,
+      "minLength": null,
+      "name": "Authorization",
+      "pattern": null,
+      "required": true,
+      "toXmlSchema": "<schema xmlns=\"http://www.w3.org/2001/XMLSchema\" xmlns:tns=\"http://validationnamespace.raml.org\" attributeFormDefault=\"unqualified\" elementFormDefault=\"qualified\" targetNamespace=\"http://validationnamespace.raml.org\">\n    <element name=\"Authorization\">\n        <simpleType>\n            <restriction base=\"string\"/>\n        </simpleType>\n    </element>\n</schema>\n",
+      "type": "string",
+      "xml": null
+     }
+    ],
+    "queryParameters": [
+     {
+      "allowedTargets": [],
+      "annotations": [],
+      "defaultValue": null,
+      "description": {
+       "annotations": [],
+       "value": "Used to send a valid OAuth 2 access token. Do not use with\nthe \"Authorization\" header.\n"
+      },
+      "displayName": {
+       "annotations": [],
+       "value": "access_token"
+      },
+      "enumValues": [],
+      "example": null,
+      "examples": [],
+      "maxLength": null,
+      "minLength": null,
+      "name": "access_token",
+      "pattern": null,
+      "required": true,
+      "toXmlSchema": "<schema xmlns=\"http://www.w3.org/2001/XMLSchema\" xmlns:tns=\"http://validationnamespace.raml.org\" attributeFormDefault=\"unqualified\" elementFormDefault=\"qualified\" targetNamespace=\"http://validationnamespace.raml.org\">\n    <element name=\"access_token\">\n        <simpleType>\n            <restriction base=\"string\"/>\n        </simpleType>\n    </element>\n</schema>\n",
+      "type": "string",
+      "xml": null
+     }
+    ],
+    "queryString": null,
+    "responses": [
+     {
+      "annotations": [],
+      "body": [],
+      "code": {
+       "value": "401"
+      },
+      "description": {
+       "annotations": [],
+       "value": "Bad or expired token. This can happen if the user or Dropbox\nrevoked or expired an access token. To fix, re-authenticate\nthe user.\n"
+      },
+      "headers": []
+     },
+     {
+      "annotations": [],
+      "body": [],
+      "code": {
+       "value": "403"
+      },
+      "description": {
+       "annotations": [],
+       "value": "Bad OAuth request (wrong consumer key, bad nonce, expired\ntimestamp...). Unfortunately, re-authenticating the user won't help here.\n"
+      },
+      "headers": []
+     }
+    ]
+   },
+   "description": {
+    "annotations": [],
+    "value": "oauth 2.0"
+   },
+   "displayName": {
+    "annotations": [],
+    "value": "OAuth2"
+   },
+   "name": "oauth_2_0",
+   "settings": {
+    "accessTokenUri": {
+     "annotations": [],
+     "value": "https://api.dropbox.com/1/oauth2/token"
+    },
+    "annotations": [],
+    "authorizationGrants": [
+     "authorization_code",
+     "implicit"
+    ],
+    "authorizationUri": {
+     "annotations": [],
+     "value": "https://www.dropbox.com/1/oauth2/authorize"
+    },
+    "requestTokenUri": null,
+    "scopes": [],
+    "signatures": [],
+    "tokenCredentialsUri": null
+   },
+   "type": "OAuth 2.0"
+  },
+  {
+   "annotations": [],
+   "describedBy": null,
+   "description": {
+    "annotations": [],
+    "value": "OAuth 1.0 continues to be supported"
+   },
+   "displayName": {
+    "annotations": [],
+    "value": "oauth_1_0"
+   },
+   "name": "oauth_1_0",
+   "settings": {
+    "accessTokenUri": null,
+    "annotations": [],
+    "authorizationGrants": [],
+    "authorizationUri": {
+     "annotations": [],
+     "value": "https://www.dropbox.com/1/oauth/authorize"
+    },
+    "requestTokenUri": {
+     "annotations": [],
+     "value": "https://api.dropbox.com/1/oauth/request_token"
+    },
+    "scopes": [],
+    "signatures": [
+     "HMAC-SHA1",
+     "PLAINTEXT"
+    ],
+    "tokenCredentialsUri": {
+     "annotations": [],
+     "value": "https://api.dropbox.com/1/oauth/access_token"
+    }
+   },
+   "type": "OAuth 1.0"
+  }
+ ],
+ "title": {
+  "annotations": [
+   {
+    "annotation": {
+     "allowedTargets": [],
+     "annotations": [],
+     "defaultValue": null,
+     "description": null,
+     "displayName": {
+      "annotations": [],
+      "value": "basic"
+     },
+     "example": null,
+     "examples": [],
+     "name": "basic",
+     "required": true,
+     "toXmlSchema": "<schema xmlns=\"http://www.w3.org/2001/XMLSchema\" xmlns:tns=\"http://validationnamespace.raml.org\" attributeFormDefault=\"unqualified\" elementFormDefault=\"qualified\" targetNamespace=\"http://validationnamespace.raml.org\">\n    <element name=\"basic\">\n        <simpleType>\n            <restriction base=\"string\"/>\n        </simpleType>\n    </element>\n</schema>\n",
+     "type": "string",
+     "xml": null
+    },
+    "name": "(basic)",
+    "structuredValue": {
+     "isScalar": true,
+     "properties": [],
+     "value": "title"
+    }
+   }
+  ],
+  "value": "api title"
+ },
+ "traits": [
+  {
+   "name": "traitOne",
+   "usage": {
+    "annotations": [],
+    "value": "late night"
+   }
+  },
+  {
+   "name": "traitTwo",
+   "usage": null
+  }
+ ],
+ "types": [
+  {
+   "additionalProperties": true,
+   "allowedTargets": [],
+   "annotations": [],
+   "defaultValue": null,
+   "description": null,
+   "discriminator": null,
+   "discriminatorValue": null,
+   "displayName": {
+    "annotations": [],
+    "value": "User"
+   },
+   "example": null,
+   "examples": [
+    {
+     "annotations": [],
+     "name": "batman",
+     "structuredValue": {
+      "isScalar": false,
+      "properties": [
+       {
+        "isArray": false,
+        "name": "firstname",
+        "value": {
+         "isScalar": true,
+         "properties": [],
+         "value": "bruce"
+        },
+        "values": []
+       },
+       {
+        "isArray": false,
+        "name": "lastname",
+        "value": {
+         "isScalar": true,
+         "properties": [],
+         "value": "wayne"
+        },
+        "values": []
+       },
+       {
+        "isArray": false,
+        "name": "age",
+        "value": {
+         "isScalar": true,
+         "properties": [],
+         "value": 77
+        },
+        "values": []
+       },
+       {
+        "isArray": false,
+        "name": "height",
+        "value": {
+         "isScalar": true,
+         "properties": [],
+         "value": 1.82
+        },
+        "values": []
+       }
+      ],
+      "value": null
+     },
+     "value": "{\nfirstname: bruce,\nlastname: wayne,\nage: 77,\nheight: 1.82\n}"
+    },
+    {
+     "annotations": [],
+     "name": "daredevil",
+     "structuredValue": {
+      "isScalar": false,
+      "properties": [
+       {
+        "isArray": false,
+        "name": "firstname",
+        "value": {
+         "isScalar": true,
+         "properties": [],
+         "value": "matt"
+        },
+        "values": []
+       },
+       {
+        "isArray": false,
+        "name": "lastname",
+        "value": {
+         "isScalar": true,
+         "properties": [],
+         "value": "murdock"
+        },
+        "values": []
+       },
+       {
+        "isArray": false,
+        "name": "age",
+        "value": {
+         "isScalar": true,
+         "properties": [],
+         "value": 52
+        },
+        "values": []
+       }
+      ],
+      "value": null
+     },
+     "value": "{\nfirstname: matt,\nlastname: murdock,\nage: 52\n}"
+    },
+    {
+     "annotations": [],
+     "name": "quicksilver",
+     "structuredValue": {
+      "isScalar": true,
+      "properties": [],
+      "value": "{\"firstname\": \"pietro\",\n \"lastname\": \"maximoff\",\n \"age\": 104,\n \"height\": 1.563,\n \"goggles\": true}\n"
+     },
+     "value": "{\"firstname\": \"pietro\",\n \"lastname\": \"maximoff\",\n \"age\": 104,\n \"height\": 1.563,\n \"goggles\": true}\n"
+    }
+   ],
+   "maxProperties": null,
+   "minProperties": null,
+   "name": "User",
+   "properties": [
+    {
+     "allowedTargets": [],
+     "annotations": [],
+     "defaultValue": null,
+     "description": null,
+     "displayName": {
+      "annotations": [],
+      "value": "firstname"
+     },
+     "enumValues": [],
+     "example": null,
+     "examples": [],
+     "maxLength": null,
+     "minLength": null,
+     "name": "firstname",
+     "pattern": null,
+     "required": true,
+     "toXmlSchema": "<schema xmlns=\"http://www.w3.org/2001/XMLSchema\" xmlns:tns=\"http://validationnamespace.raml.org\" attributeFormDefault=\"unqualified\" elementFormDefault=\"qualified\" targetNamespace=\"http://validationnamespace.raml.org\">\n    <element name=\"firstname\">\n        <simpleType>\n            <restriction base=\"string\"/>\n        </simpleType>\n    </element>\n</schema>\n",
+     "type": "string",
+     "xml": null
+    },
+    {
+     "allowedTargets": [],
+     "annotations": [],
+     "defaultValue": null,
+     "description": null,
+     "displayName": {
+      "annotations": [],
+      "value": "lastname"
+     },
+     "enumValues": [],
+     "example": null,
+     "examples": [],
+     "maxLength": null,
+     "minLength": null,
+     "name": "lastname",
+     "pattern": null,
+     "required": true,
+     "toXmlSchema": "<schema xmlns=\"http://www.w3.org/2001/XMLSchema\" xmlns:tns=\"http://validationnamespace.raml.org\" attributeFormDefault=\"unqualified\" elementFormDefault=\"qualified\" targetNamespace=\"http://validationnamespace.raml.org\">\n    <element name=\"lastname\">\n        <simpleType>\n            <restriction base=\"string\"/>\n        </simpleType>\n    </element>\n</schema>\n",
+     "type": "string",
+     "xml": null
+    },
+    {
+     "allowedTargets": [],
+     "annotations": [],
+     "defaultValue": null,
+     "description": null,
+     "displayName": {
+      "annotations": [],
+      "value": "age"
+     },
+     "enumValues": [],
+     "example": null,
+     "examples": [],
+     "format": null,
+     "maximum": 144.0,
+     "minimum": 0.0,
+     "multipleOf": null,
+     "name": "age",
+     "required": true,
+     "toXmlSchema": "<schema xmlns=\"http://www.w3.org/2001/XMLSchema\" xmlns:tns=\"http://validationnamespace.raml.org\" attributeFormDefault=\"unqualified\" elementFormDefault=\"qualified\" targetNamespace=\"http://validationnamespace.raml.org\">\n    <element name=\"age\">\n        <simpleType>\n            <restriction base=\"integer\">\n                <minInclusive value=\"0\"/>\n                <maxInclusive value=\"144\"/>\n            </restriction>\n        </simpleType>\n    </element>\n</schema>\n",
+     "type": "integer",
+     "xml": null
+    },
+    {
+     "allowedTargets": [],
+     "annotations": [],
+     "defaultValue": null,
+     "description": null,
+     "displayName": {
+      "annotations": [],
+      "value": "height?"
+     },
+     "enumValues": [],
+     "example": null,
+     "examples": [],
+     "format": null,
+     "maximum": null,
+     "minimum": null,
+     "multipleOf": null,
+     "name": "height",
+     "required": false,
+     "toXmlSchema": "<schema xmlns=\"http://www.w3.org/2001/XMLSchema\" xmlns:tns=\"http://validationnamespace.raml.org\" attributeFormDefault=\"unqualified\" elementFormDefault=\"qualified\" targetNamespace=\"http://validationnamespace.raml.org\">\n    <element name=\"height\">\n        <simpleType>\n            <restriction base=\"double\"/>\n        </simpleType>\n    </element>\n</schema>\n",
+     "type": "number",
+     "xml": null
+    },
+    {
+     "allowedTargets": [],
+     "annotations": [],
+     "defaultValue": null,
+     "description": null,
+     "displayName": {
+      "annotations": [],
+      "value": "goggles?"
+     },
+     "example": null,
+     "examples": [],
+     "name": "goggles",
+     "required": false,
+     "toXmlSchema": "<schema xmlns=\"http://www.w3.org/2001/XMLSchema\" xmlns:tns=\"http://validationnamespace.raml.org\" attributeFormDefault=\"unqualified\" elementFormDefault=\"qualified\" targetNamespace=\"http://validationnamespace.raml.org\">\n    <element name=\"goggles\" type=\"boolean\"/>\n</schema>\n",
+     "type": "boolean",
+     "xml": null
+    }
+   ],
+   "required": true,
+   "toXmlSchema": "<schema xmlns=\"http://www.w3.org/2001/XMLSchema\" xmlns:tns=\"http://validationnamespace.raml.org\" attributeFormDefault=\"unqualified\" elementFormDefault=\"qualified\" targetNamespace=\"http://validationnamespace.raml.org\">\n    <element name=\"User\" type=\"tns:User\"/>\n    <complexType name=\"User\">\n        <sequence>\n            <element name=\"firstname\">\n                <simpleType>\n                    <restriction base=\"string\"/>\n                </simpleType>\n            </element>\n            <element name=\"lastname\">\n                <simpleType>\n                    <restriction base=\"string\"/>\n                </simpleType>\n            </element>\n            <element name=\"age\">\n                <simpleType>\n                    <restriction base=\"integer\">\n                        <minInclusive value=\"0\"/>\n                        <maxInclusive value=\"144\"/>\n                    </restriction>\n                </simpleType>\n            </element>\n            <element minOccurs=\"0\" name=\"height\">\n                <simpleType>\n                    <restriction base=\"double\"/>\n                </simpleType>\n            </element>\n            <element minOccurs=\"0\" name=\"goggles\" type=\"boolean\"/>\n            <any maxOccurs=\"unbounded\" minOccurs=\"0\" processContents=\"skip\"/>\n        </sequence>\n    </complexType>\n</schema>\n",
+   "type": "object",
+   "xml": null
+  },
+  {
+   "additionalProperties": true,
+   "allowedTargets": [],
+   "annotations": [],
+   "defaultValue": null,
+   "description": null,
+   "discriminator": null,
+   "discriminatorValue": null,
+   "displayName": {
+    "annotations": [],
+    "value": "SuperUser"
+   },
+   "example": null,
+   "examples": [],
+   "maxProperties": null,
+   "minProperties": null,
+   "name": "SuperUser",
+   "properties": [
+    {
+     "allowedTargets": [],
+     "annotations": [],
+     "defaultValue": null,
+     "description": null,
+     "displayName": {
+      "annotations": [],
+      "value": "firstname"
+     },
+     "enumValues": [],
+     "example": null,
+     "examples": [],
+     "maxLength": null,
+     "minLength": null,
+     "name": "firstname",
+     "pattern": null,
+     "required": true,
+     "toXmlSchema": "<schema xmlns=\"http://www.w3.org/2001/XMLSchema\" xmlns:tns=\"http://validationnamespace.raml.org\" attributeFormDefault=\"unqualified\" elementFormDefault=\"qualified\" targetNamespace=\"http://validationnamespace.raml.org\">\n    <element name=\"firstname\">\n        <simpleType>\n            <restriction base=\"string\"/>\n        </simpleType>\n    </element>\n</schema>\n",
+     "type": "string",
+     "xml": null
+    },
+    {
+     "allowedTargets": [],
+     "annotations": [],
+     "defaultValue": null,
+     "description": null,
+     "displayName": {
+      "annotations": [],
+      "value": "lastname"
+     },
+     "enumValues": [],
+     "example": null,
+     "examples": [],
+     "maxLength": null,
+     "minLength": null,
+     "name": "lastname",
+     "pattern": null,
+     "required": true,
+     "toXmlSchema": "<schema xmlns=\"http://www.w3.org/2001/XMLSchema\" xmlns:tns=\"http://validationnamespace.raml.org\" attributeFormDefault=\"unqualified\" elementFormDefault=\"qualified\" targetNamespace=\"http://validationnamespace.raml.org\">\n    <element name=\"lastname\">\n        <simpleType>\n            <restriction base=\"string\"/>\n        </simpleType>\n    </element>\n</schema>\n",
+     "type": "string",
+     "xml": null
+    },
+    {
+     "allowedTargets": [],
+     "annotations": [],
+     "defaultValue": null,
+     "description": null,
+     "displayName": {
+      "annotations": [],
+      "value": "age"
+     },
+     "enumValues": [],
+     "example": null,
+     "examples": [],
+     "format": null,
+     "maximum": 144.0,
+     "minimum": 0.0,
+     "multipleOf": null,
+     "name": "age",
+     "required": true,
+     "toXmlSchema": "<schema xmlns=\"http://www.w3.org/2001/XMLSchema\" xmlns:tns=\"http://validationnamespace.raml.org\" attributeFormDefault=\"unqualified\" elementFormDefault=\"qualified\" targetNamespace=\"http://validationnamespace.raml.org\">\n    <element name=\"age\">\n        <simpleType>\n            <restriction base=\"integer\">\n                <minInclusive value=\"0\"/>\n                <maxInclusive value=\"144\"/>\n            </restriction>\n        </simpleType>\n    </element>\n</schema>\n",
+     "type": "integer",
+     "xml": null
+    },
+    {
+     "allowedTargets": [],
+     "annotations": [],
+     "defaultValue": null,
+     "description": null,
+     "displayName": {
+      "annotations": [],
+      "value": "height?"
+     },
+     "enumValues": [],
+     "example": null,
+     "examples": [],
+     "format": null,
+     "maximum": null,
+     "minimum": null,
+     "multipleOf": null,
+     "name": "height",
+     "required": false,
+     "toXmlSchema": "<schema xmlns=\"http://www.w3.org/2001/XMLSchema\" xmlns:tns=\"http://validationnamespace.raml.org\" attributeFormDefault=\"unqualified\" elementFormDefault=\"qualified\" targetNamespace=\"http://validationnamespace.raml.org\">\n    <element name=\"height\">\n        <simpleType>\n            <restriction base=\"double\"/>\n        </simpleType>\n    </element>\n</schema>\n",
+     "type": "number",
+     "xml": null
+    },
+    {
+     "allowedTargets": [],
+     "annotations": [],
+     "defaultValue": null,
+     "description": null,
+     "displayName": {
+      "annotations": [],
+      "value": "goggles?"
+     },
+     "example": null,
+     "examples": [],
+     "name": "goggles",
+     "required": false,
+     "toXmlSchema": "<schema xmlns=\"http://www.w3.org/2001/XMLSchema\" xmlns:tns=\"http://validationnamespace.raml.org\" attributeFormDefault=\"unqualified\" elementFormDefault=\"qualified\" targetNamespace=\"http://validationnamespace.raml.org\">\n    <element name=\"goggles\" type=\"boolean\"/>\n</schema>\n",
+     "type": "boolean",
+     "xml": null
+    },
+    {
+     "allowedTargets": [],
+     "annotations": [],
+     "defaultValue": null,
+     "description": null,
+     "displayName": {
+      "annotations": [],
+      "value": "skills"
+     },
+     "example": null,
+     "examples": [],
+     "items": {
+      "allowedTargets": [],
+      "annotations": [],
+      "defaultValue": null,
+      "description": null,
+      "displayName": {
+       "annotations": [],
+       "value": "skills"
+      },
+      "example": null,
+      "examples": [],
+      "name": "skills",
+      "required": true,
+      "toXmlSchema": "<schema xmlns=\"http://www.w3.org/2001/XMLSchema\" xmlns:tns=\"http://validationnamespace.raml.org\" attributeFormDefault=\"unqualified\" elementFormDefault=\"qualified\" targetNamespace=\"http://validationnamespace.raml.org\">\n    <element name=\"skills\">\n        <simpleType>\n            <restriction base=\"string\"/>\n        </simpleType>\n    </element>\n</schema>\n",
+      "type": "string[]",
+      "xml": null
+     },
+     "maxItems": 3,
+     "minItems": null,
+     "name": "skills",
+     "required": true,
+     "toXmlSchema": "<schema xmlns=\"http://www.w3.org/2001/XMLSchema\" xmlns:tns=\"http://validationnamespace.raml.org\" attributeFormDefault=\"unqualified\" elementFormDefault=\"qualified\" targetNamespace=\"http://validationnamespace.raml.org\">\n    <element maxOccurs=\"3\" name=\"skills\">\n        <simpleType>\n            <restriction base=\"string\"/>\n        </simpleType>\n    </element>\n</schema>\n",
+     "type": "string[]",
+     "uniqueItems": null,
+     "xml": null
+    }
+   ],
+   "required": true,
+   "toXmlSchema": "<schema xmlns=\"http://www.w3.org/2001/XMLSchema\" xmlns:tns=\"http://validationnamespace.raml.org\" attributeFormDefault=\"unqualified\" elementFormDefault=\"qualified\" targetNamespace=\"http://validationnamespace.raml.org\">\n    <element name=\"SuperUser\" type=\"tns:SuperUser\"/>\n    <complexType name=\"SuperUser\">\n        <sequence>\n            <element name=\"firstname\">\n                <simpleType>\n                    <restriction base=\"string\"/>\n                </simpleType>\n            </element>\n            <element name=\"lastname\">\n                <simpleType>\n                    <restriction base=\"string\"/>\n                </simpleType>\n            </element>\n            <element name=\"age\">\n                <simpleType>\n                    <restriction base=\"integer\">\n                        <minInclusive value=\"0\"/>\n                        <maxInclusive value=\"144\"/>\n                    </restriction>\n                </simpleType>\n            </element>\n            <element minOccurs=\"0\" name=\"height\">\n                <simpleType>\n                    <restriction base=\"double\"/>\n                </simpleType>\n            </element>\n            <element minOccurs=\"0\" name=\"goggles\" type=\"boolean\"/>\n            <element maxOccurs=\"3\" name=\"skills\">\n                <simpleType>\n                    <restriction base=\"string\"/>\n                </simpleType>\n            </element>\n            <any maxOccurs=\"unbounded\" minOccurs=\"0\" processContents=\"skip\"/>\n        </sequence>\n    </complexType>\n</schema>\n",
+   "type": "User",
+   "xml": null
+  },
+  {
+   "allowedTargets": [],
+   "annotations": [],
+   "defaultValue": null,
+   "description": null,
+   "displayName": {
+    "annotations": [],
+    "value": "Users"
+   },
+   "example": null,
+   "examples": [],
+   "items": {
+    "allowedTargets": [],
+    "annotations": [],
+    "defaultValue": null,
+    "description": null,
+    "displayName": {
+     "annotations": [],
+     "value": "User"
+    },
+    "example": null,
+    "examples": [
+     {
+      "annotations": [],
+      "name": "batman",
+      "structuredValue": {
+       "isScalar": false,
+       "properties": [
+        {
+         "isArray": false,
+         "name": "firstname",
+         "value": {
+          "isScalar": true,
+          "properties": [],
+          "value": "bruce"
+         },
+         "values": []
+        },
+        {
+         "isArray": false,
+         "name": "lastname",
+         "value": {
+          "isScalar": true,
+          "properties": [],
+          "value": "wayne"
+         },
+         "values": []
+        },
+        {
+         "isArray": false,
+         "name": "age",
+         "value": {
+          "isScalar": true,
+          "properties": [],
+          "value": 77
+         },
+         "values": []
+        },
+        {
+         "isArray": false,
+         "name": "height",
+         "value": {
+          "isScalar": true,
+          "properties": [],
+          "value": 1.82
+         },
+         "values": []
+        }
+       ],
+       "value": null
+      },
+      "value": "{\nfirstname: bruce,\nlastname: wayne,\nage: 77,\nheight: 1.82\n}"
+     },
+     {
+      "annotations": [],
+      "name": "daredevil",
+      "structuredValue": {
+       "isScalar": false,
+       "properties": [
+        {
+         "isArray": false,
+         "name": "firstname",
+         "value": {
+          "isScalar": true,
+          "properties": [],
+          "value": "matt"
+         },
+         "values": []
+        },
+        {
+         "isArray": false,
+         "name": "lastname",
+         "value": {
+          "isScalar": true,
+          "properties": [],
+          "value": "murdock"
+         },
+         "values": []
+        },
+        {
+         "isArray": false,
+         "name": "age",
+         "value": {
+          "isScalar": true,
+          "properties": [],
+          "value": 52
+         },
+         "values": []
+        }
+       ],
+       "value": null
+      },
+      "value": "{\nfirstname: matt,\nlastname: murdock,\nage: 52\n}"
+     },
+     {
+      "annotations": [],
+      "name": "quicksilver",
+      "structuredValue": {
+       "isScalar": true,
+       "properties": [],
+       "value": "{\"firstname\": \"pietro\",\n \"lastname\": \"maximoff\",\n \"age\": 104,\n \"height\": 1.563,\n \"goggles\": true}\n"
+      },
+      "value": "{\"firstname\": \"pietro\",\n \"lastname\": \"maximoff\",\n \"age\": 104,\n \"height\": 1.563,\n \"goggles\": true}\n"
+     }
+    ],
+    "name": "User",
+    "required": true,
+    "toXmlSchema": "<schema xmlns=\"http://www.w3.org/2001/XMLSchema\" xmlns:tns=\"http://validationnamespace.raml.org\" attributeFormDefault=\"unqualified\" elementFormDefault=\"qualified\" targetNamespace=\"http://validationnamespace.raml.org\">\n    <element name=\"User\" type=\"tns:User\"/>\n    <complexType name=\"User\">\n        <sequence>\n            <element name=\"firstname\">\n                <simpleType>\n                    <restriction base=\"string\"/>\n                </simpleType>\n            </element>\n            <element name=\"lastname\">\n                <simpleType>\n                    <restriction base=\"string\"/>\n                </simpleType>\n            </element>\n            <element name=\"age\">\n                <simpleType>\n                    <restriction base=\"integer\">\n                        <minInclusive value=\"0\"/>\n                        <maxInclusive value=\"144\"/>\n                    </restriction>\n                </simpleType>\n            </element>\n            <element minOccurs=\"0\" name=\"height\">\n                <simpleType>\n                    <restriction base=\"double\"/>\n                </simpleType>\n            </element>\n            <element minOccurs=\"0\" name=\"goggles\" type=\"boolean\"/>\n            <any maxOccurs=\"unbounded\" minOccurs=\"0\" processContents=\"skip\"/>\n        </sequence>\n    </complexType>\n</schema>\n",
+    "type": "object",
+    "xml": null
+   },
+   "maxItems": null,
+   "minItems": 2,
+   "name": "Users",
+   "required": true,
+   "toXmlSchema": "<schema xmlns=\"http://www.w3.org/2001/XMLSchema\" xmlns:tns=\"http://validationnamespace.raml.org\" attributeFormDefault=\"unqualified\" elementFormDefault=\"qualified\" targetNamespace=\"http://validationnamespace.raml.org\">\n    <element maxOccurs=\"unbounded\" minOccurs=\"2\" name=\"User\" type=\"tns:User\"/>\n    <complexType name=\"User\">\n        <sequence>\n            <element name=\"firstname\">\n                <simpleType>\n                    <restriction base=\"string\"/>\n                </simpleType>\n            </element>\n            <element name=\"lastname\">\n                <simpleType>\n                    <restriction base=\"string\"/>\n                </simpleType>\n            </element>\n            <element name=\"age\">\n                <simpleType>\n                    <restriction base=\"integer\">\n                        <minInclusive value=\"0\"/>\n                        <maxInclusive value=\"144\"/>\n                    </restriction>\n                </simpleType>\n            </element>\n            <element minOccurs=\"0\" name=\"height\">\n                <simpleType>\n                    <restriction base=\"double\"/>\n                </simpleType>\n            </element>\n            <element minOccurs=\"0\" name=\"goggles\" type=\"boolean\"/>\n            <any maxOccurs=\"unbounded\" minOccurs=\"0\" processContents=\"skip\"/>\n        </sequence>\n    </complexType>\n</schema>\n",
+   "type": "User[]",
+   "uniqueItems": null,
+   "xml": null
+  },
+  {
+   "allowedTargets": [],
+   "annotations": [],
+   "defaultValue": null,
+   "description": null,
+   "displayName": {
+    "annotations": [],
+    "value": "nString"
+   },
+   "enumValues": [],
+   "example": null,
+   "examples": [],
+   "maxLength": 10,
+   "minLength": null,
+   "name": "nString",
+   "pattern": null,
+   "required": true,
+   "toXmlSchema": "<schema xmlns=\"http://www.w3.org/2001/XMLSchema\" xmlns:tns=\"http://validationnamespace.raml.org\" attributeFormDefault=\"unqualified\" elementFormDefault=\"qualified\" targetNamespace=\"http://validationnamespace.raml.org\">\n    <element name=\"nString\">\n        <simpleType>\n            <restriction base=\"string\">\n                <maxLength value=\"10\"/>\n            </restriction>\n        </simpleType>\n    </element>\n</schema>\n",
+   "type": "string",
+   "xml": null
+  }
+ ],
+ "uses": [],
+ "version": {
+  "annotations": [],
+  "value": "v1"
+ }
+}

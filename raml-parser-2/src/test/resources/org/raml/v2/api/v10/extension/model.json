@@ -1,0 +1,294 @@
+{
+ "annotationTypes": [],
+ "annotations": [],
+ "baseUri": null,
+ "baseUriParameters": [],
+ "documentation": [],
+ "mediaType": [],
+ "protocols": [],
+ "ramlVersion": "1.0",
+ "resourceTypes": [],
+ "resources": [
+  {
+   "annotations": [],
+   "description": null,
+   "displayName": {
+    "annotations": [],
+    "value": "/resource"
+   },
+   "is": [],
+   "methods": [
+    {
+     "annotations": [],
+     "body": [
+      {
+       "additionalProperties": true,
+       "allowedTargets": [],
+       "annotations": [],
+       "defaultValue": null,
+       "description": null,
+       "discriminator": null,
+       "discriminatorValue": null,
+       "displayName": {
+        "annotations": [],
+        "value": "application/json"
+       },
+       "example": null,
+       "examples": [],
+       "maxProperties": null,
+       "minProperties": null,
+       "name": "application/json",
+       "properties": [
+        {
+         "allowedTargets": [],
+         "annotations": [],
+         "defaultValue": null,
+         "description": null,
+         "displayName": {
+          "annotations": [],
+          "value": "name"
+         },
+         "enumValues": [],
+         "example": null,
+         "examples": [],
+         "maxLength": null,
+         "minLength": null,
+         "name": "name",
+         "pattern": null,
+         "required": true,
+         "toXmlSchema": "<schema xmlns=\"http://www.w3.org/2001/XMLSchema\" xmlns:tns=\"http://validationnamespace.raml.org\" attributeFormDefault=\"unqualified\" elementFormDefault=\"qualified\" targetNamespace=\"http://validationnamespace.raml.org\">\n    <element name=\"name\">\n        <simpleType>\n            <restriction base=\"string\"/>\n        </simpleType>\n    </element>\n</schema>\n",
+         "type": "string",
+         "xml": null
+        }
+       ],
+       "required": true,
+       "toXmlSchema": "<schema xmlns=\"http://www.w3.org/2001/XMLSchema\" xmlns:tns=\"http://validationnamespace.raml.org\" attributeFormDefault=\"unqualified\" elementFormDefault=\"qualified\" targetNamespace=\"http://validationnamespace.raml.org\">\n    <element name=\"User\">\n        <complexType>\n            <sequence>\n                <element name=\"name\">\n                    <simpleType>\n                        <restriction base=\"string\"/>\n                    </simpleType>\n                </element>\n                <any maxOccurs=\"unbounded\" minOccurs=\"0\" processContents=\"skip\"/>\n            </sequence>\n        </complexType>\n    </element>\n</schema>\n",
+       "type": "User",
+       "xml": null
+      }
+     ],
+     "description": null,
+     "displayName": {
+      "annotations": [],
+      "value": "post"
+     },
+     "headers": [],
+     "is": [
+      {
+       "name": "parametrized",
+       "structuredValue": {
+        "isScalar": false,
+        "properties": [
+         {
+          "isArray": false,
+          "name": "model",
+          "value": {
+           "isScalar": true,
+           "properties": [],
+           "value": "User"
+          },
+          "values": []
+         }
+        ],
+        "value": null
+       },
+       "trait": {
+        "name": "parametrized",
+        "usage": null
+       }
+      }
+     ],
+     "method": "post",
+     "protocols": [],
+     "queryParameters": [],
+     "queryString": null,
+     "responses": [],
+     "securedBy": []
+    }
+   ],
+   "relativeUri": {
+    "value": "/resource"
+   },
+   "resourcePath": "/resource",
+   "resources": [],
+   "securedBy": [],
+   "type": null,
+   "uriParameters": []
+  },
+  {
+   "annotations": [],
+   "description": null,
+   "displayName": {
+    "annotations": [],
+    "value": "/extended"
+   },
+   "is": [],
+   "methods": [
+    {
+     "annotations": [],
+     "body": [
+      {
+       "additionalProperties": true,
+       "allowedTargets": [],
+       "annotations": [],
+       "defaultValue": null,
+       "description": null,
+       "discriminator": null,
+       "discriminatorValue": null,
+       "displayName": {
+        "annotations": [],
+        "value": "text/xml"
+       },
+       "example": null,
+       "examples": [],
+       "maxProperties": null,
+       "minProperties": null,
+       "name": "text/xml",
+       "properties": [
+        {
+         "allowedTargets": [],
+         "annotations": [],
+         "defaultValue": null,
+         "description": null,
+         "displayName": {
+          "annotations": [],
+          "value": "name"
+         },
+         "enumValues": [],
+         "example": null,
+         "examples": [],
+         "maxLength": null,
+         "minLength": null,
+         "name": "name",
+         "pattern": null,
+         "required": true,
+         "toXmlSchema": "<schema xmlns=\"http://www.w3.org/2001/XMLSchema\" xmlns:tns=\"http://validationnamespace.raml.org\" attributeFormDefault=\"unqualified\" elementFormDefault=\"qualified\" targetNamespace=\"http://validationnamespace.raml.org\">\n    <element name=\"name\">\n        <simpleType>\n            <restriction base=\"string\"/>\n        </simpleType>\n    </element>\n</schema>\n",
+         "type": "string",
+         "xml": null
+        }
+       ],
+       "required": true,
+       "toXmlSchema": "<schema xmlns=\"http://www.w3.org/2001/XMLSchema\" xmlns:tns=\"http://validationnamespace.raml.org\" attributeFormDefault=\"unqualified\" elementFormDefault=\"qualified\" targetNamespace=\"http://validationnamespace.raml.org\">\n    <element name=\"User\">\n        <complexType>\n            <sequence>\n                <element name=\"name\">\n                    <simpleType>\n                        <restriction base=\"string\"/>\n                    </simpleType>\n                </element>\n                <any maxOccurs=\"unbounded\" minOccurs=\"0\" processContents=\"skip\"/>\n            </sequence>\n        </complexType>\n    </element>\n</schema>\n",
+       "type": "User",
+       "xml": null
+      }
+     ],
+     "description": null,
+     "displayName": {
+      "annotations": [],
+      "value": "post"
+     },
+     "headers": [],
+     "is": [
+      {
+       "name": "dynamic",
+       "structuredValue": {
+        "isScalar": false,
+        "properties": [
+         {
+          "isArray": false,
+          "name": "model",
+          "value": {
+           "isScalar": true,
+           "properties": [],
+           "value": "User"
+          },
+          "values": []
+         }
+        ],
+        "value": null
+       },
+       "trait": {
+        "name": "dynamic",
+        "usage": null
+       }
+      }
+     ],
+     "method": "post",
+     "protocols": [],
+     "queryParameters": [],
+     "queryString": null,
+     "responses": [],
+     "securedBy": []
+    }
+   ],
+   "relativeUri": {
+    "value": "/extended"
+   },
+   "resourcePath": "/extended",
+   "resources": [],
+   "securedBy": [],
+   "type": null,
+   "uriParameters": []
+  }
+ ],
+ "schemas": [],
+ "securedBy": [],
+ "securitySchemes": [],
+ "title": {
+  "annotations": [],
+  "value": "extension test"
+ },
+ "traits": [
+  {
+   "name": "parametrized",
+   "usage": null
+  },
+  {
+   "name": "dynamic",
+   "usage": null
+  }
+ ],
+ "types": [
+  {
+   "additionalProperties": true,
+   "allowedTargets": [],
+   "annotations": [],
+   "defaultValue": null,
+   "description": null,
+   "discriminator": null,
+   "discriminatorValue": null,
+   "displayName": {
+    "annotations": [],
+    "value": "User"
+   },
+   "example": null,
+   "examples": [],
+   "maxProperties": null,
+   "minProperties": null,
+   "name": "User",
+   "properties": [
+    {
+     "allowedTargets": [],
+     "annotations": [],
+     "defaultValue": null,
+     "description": null,
+     "displayName": {
+      "annotations": [],
+      "value": "name"
+     },
+     "enumValues": [],
+     "example": null,
+     "examples": [],
+     "maxLength": null,
+     "minLength": null,
+     "name": "name",
+     "pattern": null,
+     "required": true,
+     "toXmlSchema": "<schema xmlns=\"http://www.w3.org/2001/XMLSchema\" xmlns:tns=\"http://validationnamespace.raml.org\" attributeFormDefault=\"unqualified\" elementFormDefault=\"qualified\" targetNamespace=\"http://validationnamespace.raml.org\">\n    <element name=\"name\">\n        <simpleType>\n            <restriction base=\"string\"/>\n        </simpleType>\n    </element>\n</schema>\n",
+     "type": "string",
+     "xml": null
+    }
+   ],
+   "required": true,
+   "toXmlSchema": "<schema xmlns=\"http://www.w3.org/2001/XMLSchema\" xmlns:tns=\"http://validationnamespace.raml.org\" attributeFormDefault=\"unqualified\" elementFormDefault=\"qualified\" targetNamespace=\"http://validationnamespace.raml.org\">\n    <element name=\"User\" type=\"tns:User\"/>\n    <complexType name=\"User\">\n        <sequence>\n            <element name=\"name\">\n                <simpleType>\n                    <restriction base=\"string\"/>\n                </simpleType>\n            </element>\n            <any maxOccurs=\"unbounded\" minOccurs=\"0\" processContents=\"skip\"/>\n        </sequence>\n    </complexType>\n</schema>\n",
+   "type": "object",
+   "xml": null
+  }
+ ],
+ "uses": [],
+ "version": {
+  "annotations": [],
+  "value": "v1"
+ }
+}

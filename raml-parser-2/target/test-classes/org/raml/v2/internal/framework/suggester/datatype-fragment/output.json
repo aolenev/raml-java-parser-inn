@@ -1,0 +1,86 @@
+[ {
+  "label" : "(Annotation)",
+  "description" : "Annotations to be applied to this API. Annotations are any property whose key begins with \"(\" and ends with \")\" and whose name (the part between the beginning and ending parentheses) is a declared annotation name..",
+  "value" : "(<cursor>): ",
+  "prefix" : ""
+}, {
+  "label" : "AdditionalProperties",
+  "description" : "A Boolean that indicates if an object instance has additional properties.",
+  "value" : "additionalProperties: ",
+  "prefix" : ""
+}, {
+  "label" : "Default",
+  "description" : null,
+  "value" : "default: ",
+  "prefix" : ""
+}, {
+  "label" : "Description",
+  "description" : "A longer, human-friendly description of the API",
+  "value" : "description: ",
+  "prefix" : ""
+}, {
+  "label" : "Discriminator",
+  "description" : "Determines the concrete type of an individual object at runtime when, for example, payloads contain ambiguous types due to unions or inheritance. The value must match the name of one of the declared properties of a type. Unsupported practices are inline type declarations and using discriminator with non-scalar properties.",
+  "value" : "discriminator: ",
+  "prefix" : ""
+}, {
+  "label" : "DiscriminatorValue",
+  "description" : "Identifies the declaring type. Requires including a discriminator facet in the type declaration. A valid value is an actual value that might identify the type of an individual object and is unique in the hierarchy of the type. Inline type declarations are not supported.",
+  "value" : "discriminatorValue: ",
+  "prefix" : ""
+}, {
+  "label" : "DisplayName",
+  "description" : "An alternate, human-friendly name for the method (in the resource's context).",
+  "value" : "displayName: ",
+  "prefix" : ""
+}, {
+  "label" : "Facets",
+  "description" : "A map of additional, user-defined restrictions that will be inherited and applied by any extending subtype. See section User-defined Facets for more information.",
+  "value" : "facets: ",
+  "prefix" : ""
+}, {
+  "label" : "MaxProperties",
+  "description" : "The maximum number of properties allowed for instances of this type.",
+  "value" : "maxProperties: ",
+  "prefix" : ""
+}, {
+  "label" : "MinProperties",
+  "description" : "The minimum number of properties allowed for instances of this type.",
+  "value" : "minProperties: ",
+  "prefix" : ""
+}, {
+  "label" : "Properties",
+  "description" : "The properties that instances of this type can or must have.",
+  "value" : "properties: ",
+  "prefix" : ""
+}, {
+  "label" : "Required",
+  "description" : null,
+  "value" : "required: ",
+  "prefix" : ""
+}, {
+  "label" : "Schema",
+  "description" : "A base type which the current type extends or just wraps. The value of a type node MUST be either a) the name of a user-defined type or b) the name of a built-in RAML data type (object, array, or one of the scalar types) or c) an inline type declaration.",
+  "value" : "schema: ",
+  "prefix" : ""
+}, {
+  "label" : "Type",
+  "description" : "A base type which the current type extends or just wraps. The value of a type node MUST be either a) the name of a user-defined type or b) the name of a built-in RAML data type (object, array, or one of the scalar types) or c) an inline type declaration.",
+  "value" : "type: ",
+  "prefix" : ""
+}, {
+  "label" : "Usage",
+  "description" : null,
+  "value" : "usage: ",
+  "prefix" : ""
+}, {
+  "label" : "Uses",
+  "description" : "Importing libraries.",
+  "value" : "uses: ",
+  "prefix" : ""
+}, {
+  "label" : "Xml",
+  "description" : null,
+  "value" : "xml: ",
+  "prefix" : ""
+} ]
